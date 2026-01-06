@@ -19,7 +19,7 @@ public class giocatore{
         return nome;
     }
     public void stampaCartelle() {
-        System.out.println("cartelle di"+ nome);
+        System.out.println("cartelle di "+ nome);
         for (int i=0; i<cartelle.length; i++) {
             System.out.println("cartella "+ (i+1));
             cartelle[i].stampaCartella();
