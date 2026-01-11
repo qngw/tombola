@@ -1,9 +1,16 @@
 public class cartellone{
-    private int numero= 1;
+    private boolean[] usciti = new boolean[91];
+    private int rimasti = 90;
     public boolean haNumeri(){
-        return numero<= 90;
+        return rimasti> 0;
     }
     public int estraiNumero(){
-        return numero++;
+        int numero;
+        do{
+            numero = (int)(Math.random()*90)+1;
+        }while(usciti[numero]);
+        usciti[numero]= true;
+        rimasti--;
+        return numero;
     }
 }

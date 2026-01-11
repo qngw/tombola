@@ -12,12 +12,42 @@ public class cartella{
         generaCartella();
     }
     private void generaCartella(){
-        for (int r=0; r<3; r++) {
+        for(int r=0;r<3;r++){
+            for(int c=0;c<9;c++){
+                numeri[r][c]=0;
+            }
+        }
+
+        boolean[][] occupato = new boolean[3][9];
+
+        for(int r=0;r<3;r++){
             int inseriti=0;
-            for (int c=0; c<9 && inseriti<5; c++) {
-                numeri[r][c] = prossimoNumero;
-                prossimoNumero++;
-                inseriti++;
+            while(inseriti<5){
+                int col=(int)(Math.random()*9);
+                if(!occupato[r][col]){
+                    int min,max;
+                    if(col==0){
+                        min=1; max=9;
+                    }else if(col==8){
+                        min=80; max=90;
+                    }else{
+                        min=col*10;
+                        max=col*10+9;
+                    }
+                    int numero;
+                    boolean ok;
+                    do{
+                        numero=(int)(Math.random()*(max-min+1))+min;
+                        ok=true;
+                        for(int i=0;i<3;i++){
+                            if(numeri[i][col]==numero) ok=false;
+                        }
+                    }while(!ok);
+
+                    numeri[r][col]=numero;
+                    occupato[r][col]=true;
+                    inseriti++;
+                }
             }
         }
     }
