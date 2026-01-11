@@ -104,11 +104,12 @@ public class cartella{
                 }else if(segnati[r][c]){
                     System.out.print(" X  ");
                 }else{
-                    System.out.print(numeri[r][c] + "  ");
+                    System.out.printf("%2d  ", numeri[r][c]);
                 }
             }
             System.out.println();
         }
         System.out.println();
     }
+
 }
