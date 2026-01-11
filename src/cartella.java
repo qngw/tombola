@@ -23,16 +23,16 @@ public class cartella{
         for(int r=0;r<3;r++){
             int inseriti=0;
             while(inseriti<5){
-                int col=(int)(Math.random()*9);
-                if(!occupato[r][col]){
+                int c=(int)(Math.random()*9);
+                if(!occupato[r][c]){
                     int min,max;
-                    if(col==0){
+                    if(c==0){
                         min=1; max=9;
-                    }else if(col==8){
+                    }else if(c==8){
                         min=80; max=90;
                     }else{
-                        min=col*10;
-                        max=col*10+9;
+                        min=c*10;
+                        max=c*10+9;
                     }
                     int numero;
                     boolean ok;
@@ -40,12 +40,12 @@ public class cartella{
                         numero=(int)(Math.random()*(max-min+1))+min;
                         ok=true;
                         for(int i=0;i<3;i++){
-                            if(numeri[i][col]==numero) ok=false;
+                            if(numeri[i][c]==numero) ok=false;
                         }
                     }while(!ok);
 
-                    numeri[r][col]=numero;
-                    occupato[r][col]=true;
+                    numeri[r][c]=numero;
+                    occupato[r][c]=true;
                     inseriti++;
                 }
             }
