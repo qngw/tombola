@@ -1,5 +1,4 @@
 //
-//
 public class cartella{
     private int[][] numeri= new int[3][9];
     private boolean[][] segnati= new boolean[3][9];
