@@ -1,4 +1,3 @@
-//
 public class cartella{
     private int[][] numeri= new int[3][9];
     private boolean[][] segnati= new boolean[3][9];
@@ -7,7 +6,7 @@ public class cartella{
     private boolean ternoFatto= false;
     private boolean quaternaFatta= false;
     private boolean cinquinaFatta= false;
-    private boolean tombolaFatta= false;
+    static boolean tombolaFatta= false;
 
     public cartella(){
         generaCartella();
