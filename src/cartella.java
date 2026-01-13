@@ -3,11 +3,11 @@ public class cartella{
     private int[][] numeri= new int[3][9];
     private boolean[][] segnati= new boolean[3][9];
     private int prossimoNumero= 1;
-    static boolean amboFatto= false;
-    static boolean ternoFatto= false;
-    static boolean quaternaFatta= false;
-    static boolean cinquinaFatta= false;
-    static boolean tombolaFatta= false;
+    private boolean amboFatto= false;
+    private boolean ternoFatto= false;
+    private boolean quaternaFatta= false;
+    private boolean cinquinaFatta= false;
+    private boolean tombolaFatta= false;
 
     public cartella(){
         generaCartella();
@@ -89,8 +89,8 @@ public class cartella{
     public void segnaNumero(int numero,String nomeGiocatore){
         for(int r = 0; r < 3; r++){
             for(int c = 0; c < 9; c++){
-                if(numeri[r][c] == numero){
-                    segnati[r][c] = true;
+                if(numeri[r][c]==numero){
+                    segnati[r][c]=true;
                     controllaRiga(r, nomeGiocatore);
                     controllaTombola(nomeGiocatore);
                 }
@@ -105,7 +105,7 @@ public class cartella{
                 }else if(segnati[r][c]){
                     System.out.print(" X  ");
                 }else{
-                    System.out.printf("%2d  ", numeri[r][c]);
+                    System.out.printf("%2d", numeri[r][c]);
                 }
             }
             System.out.println();

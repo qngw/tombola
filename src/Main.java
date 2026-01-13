@@ -30,6 +30,7 @@ public class Main {
         System.out.println();
         while(cartellone.haNumeri() && !cartella.tombolaFatta){
             int numero = cartellone.estraiNumero();
+            scanner.nextLine();
             System.out.println("Mescolando...: " + numero+"!");
             System.out.println();
             for (int i=0; i<giocatori.length; i++) {
