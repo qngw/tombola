@@ -1,4 +1,5 @@
 //
+//
 public class cartellone{
     private boolean[] usciti = new boolean[91];
     private int rimasti = 90;

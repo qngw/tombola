@@ -1,4 +1,5 @@
 //
+//
 public class giocatore{
     private String nome;
     private cartella[] cartelle;
